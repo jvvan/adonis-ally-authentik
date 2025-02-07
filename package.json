@@ -1,14 +1,15 @@
 {
-  "name": "ally-custom-service",
-  "description": "Starter kit to create an Ally driver for an OAuth2 service",
-  "version": "0.0.0",
+  "name": "@jvvan/adonis-ally-authentik",
+  "description": "AdonisJS Ally Driver For Authentik",
+  "version": "1.0.0",
   "main": "index.js",
   "type": "module",
   "files": [
-    "build/index.js",
-    "build/index.d.ts",
-    "build/src"
+    "build"
   ],
+  "exports": {
+    ".": "./build/index.js"
+  },
   "scripts": {
     "lint": "eslint . --ext=.ts",
     "format": "prettier --write .",
@@ -30,7 +31,7 @@
     "@adonisjs/ally": "^5.0.0-7",
     "@adonisjs/core": "^6.1.5-32"
   },
-  "author": "",
+  "author": "jvvan",
   "license": "MIT",
   "keywords": [
     "social-auth",
@@ -40,5 +41,9 @@
   "eslintConfig": {
     "extends": "@adonisjs/eslint-config/package"
   },
-  "prettier": "@adonisjs/prettier-config"
+  "prettier": "@adonisjs/prettier-config",
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest"
+  }
 }
